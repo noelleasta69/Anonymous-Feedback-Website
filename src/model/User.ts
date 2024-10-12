@@ -65,7 +65,10 @@ const UserSchema: Schema<User> = new Schema({
         type: MessageSchema, // Embedding MessageSchema
         required: false
     }]
+    // mesages: [MessageSchema] // this works too instead of above code
 });
 
-// exportig the models
-export const Me
+const UserModel = (mongoose.models.user as mongoose.Model<User>) || mongoose.model<User>("User", UserSchema)
+
+export default UserModel;
+ 
