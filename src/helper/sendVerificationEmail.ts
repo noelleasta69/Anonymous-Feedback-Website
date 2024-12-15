@@ -16,6 +16,8 @@ export async function sendVerificationEmail(
       subject: 'verification Code | True Feedback',
       react: EmailTemplate({username, otp: verificationCode}), 
     });
+    console.log("emial sent succ");
+    console.log(email, username, verificationCode, "thisiasdfjaldsfj");
     return ({
       success: true,
       message: "Successfully sent verification code"
@@ -49,7 +51,7 @@ export async function sendVerificationEmail(
 //       subject: 'Hello world',
 //       react: EmailTemplate({ username: 'John' , otp: "123456"}),
 //     });
-  
+    
 //     if (error) {
 //       return res.status(400).json(error);
 //     }
