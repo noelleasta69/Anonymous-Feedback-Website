@@ -14,7 +14,7 @@ const MessageSchema : Schema<Message> = new Schema({
         type: Date,
         required: true,
         default: Date.now
-    }
+    },
 })
 
 export interface User extends Document {
@@ -66,9 +66,10 @@ const UserSchema: Schema<User> = new Schema({
         required: false
     }]
     // mesages: [MessageSchema] // this works too instead of above code
-});
+}); 
 
-const UserModel = (mongoose.models.user as mongoose.Model<User>) || mongoose.model<User>("User", UserSchema)
+const UserModel = (mongoose.models.User as mongoose.Model<User>) || mongoose.model<User>("User", UserSchema)
+// checks if ther exists a User model if not then creates a new one. 
 
 export default UserModel;
  
