@@ -8,7 +8,7 @@ import UserModel from "@/model/User";
 export const authOptions: NextAuthOptions = {
     providers: [
         CredentialsProvider({
-            id: "credentials", // this is just id you have given to identify this auth option as you can have more than one
+            id: "credentials", // this is just id you have given to identify this auth option,as you can have more than one
             name: "credentials",//this is the name of credential options you have given (you can name it anything)
 
             credentials: {
@@ -24,7 +24,7 @@ export const authOptions: NextAuthOptions = {
                     const user = await UserModel.findOne({
                         $or: [
                             {email: credentials.identifier.email},// this is how you get access to credentials
-                            {username: credentials.identifier} // both are correct>>>>
+                            {username: credentials.identifier} // both are correct>>>> that is no need of credentials.identifiers.username
                         ]
                     })
 
@@ -55,18 +55,22 @@ export const authOptions: NextAuthOptions = {
     ],
     callbacks: {
         async jwt({ token, user}) {
+
+            // below , we are updating token so that we can extract that information when we have token 
+            // but before doing below thing you would have to add types (see /src/types/next-auth.d.ts);
             if(user){
                 token._id = user._id?.toString()
                 token.isVerified = user.isVerified
                 token.isAcceptingMessages = user.isAcceptingMessages;
-                token.username = user.username
+                token.username = user.username  
 
             }
 
-            return token
+            return token // when using jwt in next auth you always have to return token (said by hitesh)
         },
         async session({ session, user, token }) {
             if(token){
+            // below , we are updating session so that we can extract that information when we have session 
                 session.user._id = token._id;
                 session.user.isVerified = token.isVerified
                 session.user.isAcceptingMessages = token.isAcceptingMessages
@@ -74,7 +78,7 @@ export const authOptions: NextAuthOptions = {
 
             }
 
-            return session
+            return session // // when using session in next auth you always have to return session (said by hitesh)
         },
     },
     pages: {
@@ -85,5 +89,5 @@ export const authOptions: NextAuthOptions = {
     },
     secret: process.env.NEXTAUTH_SECRET
 
-
+ 
 }
