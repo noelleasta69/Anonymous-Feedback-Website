@@ -22,6 +22,8 @@ export default function VerificationEmail({ username, otp }: VerificationEmailPr
       <Head>
         <title>Email Verification</title>
       </Head>
+
+      {/* console.log(username, otp); */}
       
       {/* Preview text that shows in the user's inbox */}
       <Preview>Your verification code is {otp}</Preview>
