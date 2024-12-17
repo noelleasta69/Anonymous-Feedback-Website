@@ -1,0 +1,83 @@
+[33mcommit 1e08b65945226a6242c1c42e399fab20730f412d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: pranav <obitouchihathesageofsixpaths@gmail.com>
+Date:   Tue Dec 17 19:15:14 2024 +0530
+
+    added frontend
+
+[33mcommit 97ba60fe98676578c1a1b0da724b540320ace0bd[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: pranav <obitouchihathesageofsixpaths@gmail.com>
+Date:   Sun Dec 15 08:57:32 2024 +0530
+
+    resend email added
+
+[33mcommit c537194c396db5a431551df7938a87fbd43bfa4c[m
+Author: pranav <obitouchihathesageofsixpaths@gmail.com>
+Date:   Sun Dec 15 08:56:47 2024 +0530
+
+    verification Email route
+
+[33mcommit 32a3b47151cd8e5d515d68dea5de9cf6fd466bde[m
+Author: pranav <obitouchihathesageofsixpaths@gmail.com>
+Date:   Sun Dec 15 08:54:25 2024 +0530
+
+    added sign up route
+
+[33mcommit 02621394e5525580fbd3155b9baead84f13dde65[m
+Author: pranav <obitouchihathesageofsixpaths@gmail.com>
+Date:   Sun Dec 15 08:53:43 2024 +0530
+
+    added next auth
+
+[33mcommit c566f74f85a3f1ca17bd0cc7d3a7eb842836cd89[m
+Author: pranav <obitouchihathesageofsixpaths@gmail.com>
+Date:   Sun Dec 15 08:52:51 2024 +0530
+
+    update userShema
+
+[33mcommit 6ce0fde6bed40fb1d7c47fb8ebff4bd17676a58c[m
+Author: pranav <obitouchihathesageofsixpaths@gmail.com>
+Date:   Sun Dec 15 08:50:48 2024 +0530
+
+    accept messaage api
+
+[33mcommit baf54c1978ebba4bfe4bc042a194a2d6134e9d86[m
+Author: pranav <obitouchihathesageofsixpaths@gmail.com>
+Date:   Tue Oct 22 19:12:28 2024 +0530
+
+    added next-auth
+
+[33mcommit 3a24ecfc2a9dab1e1ac371cab71927d7a135730c[m
+Author: pranav <obitouchihathesageofsixpaths@gmail.com>
+Date:   Thu Oct 17 18:57:25 2024 +0530
+
+    added resend email varification
+
+[33mcommit c5a2adc9373692831e8c1dcd45851affeb54d461[m
+Author: pranav <obitouchihathesageofsixpaths@gmail.com>
+Date:   Sat Oct 12 11:13:44 2024 +0530
+
+    exported db Connect funtion
+
+[33mcommit 53888d6d86d102c160d8d87c743fbb043d1c45c4[m
+Author: pranav <obitouchihathesageofsixpaths@gmail.com>
+Date:   Wed Oct 9 08:11:37 2024 +0530
+
+    Add MongoDB connection logic using Mongoose
+
+[33mcommit bad639f5299f137051c40cbbd1e89df3aa3e1f67[m
+Author: pranav <obitouchihathesageofsixpaths@gmail.com>
+Date:   Wed Oct 9 06:14:05 2024 +0530
+
+    added zod validation
+
+[33mcommit 1f37743daf0cb72f6576c5212cc557a6c1f26841[m
+Author: pranav <obitouchihathesageofsixpaths@gmail.com>
+Date:   Thu Sep 12 00:18:08 2024 +0530
+
+    added schema for user and posts
+
+[33mcommit acef9445d74048003c662fa006699be55314b45e[m
+Author: pranav <obitouchihathesageofsixpaths@gmail.com>
+Date:   Tue Sep 10 18:13:02 2024 +0530
+
+    Initial commit from Create Next App
