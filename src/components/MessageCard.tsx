@@ -1,4 +1,4 @@
-    'use client'
+'use client'
 
 import React, { useState } from 'react';
 import axios, { AxiosError } from 'axios';
@@ -18,8 +18,9 @@ import {
   AlertDialogTrigger,
 } from '@/components/ui/alert-dialog';
 import { Button } from './ui/button';
-import { useToast } from '@/components/ui/use-toast';
-import { ApiResponseL } from '@/types/ApiResponse';
+// import { useToast } from '@/components/ui/use-toast';
+import { useToast } from "@/hooks/use-toast" 
+import { NextApiResponce as ApiResponse}  from '@/types/ApiResponce'; 
 
 type MessageCardProps = {
   message: Message;

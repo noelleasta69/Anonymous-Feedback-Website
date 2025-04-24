@@ -9,6 +9,8 @@ export async function sendVerificationEmail(
   username: string,
   verificationCode: string
 ): Promise<NextApiResponce> {
+
+  console.log("reached in the function of sendVerificationEmail");
   try {
     await resend.emails.send({
       from: 'onboarding@resend.dev',
@@ -18,6 +20,7 @@ export async function sendVerificationEmail(
     });
     console.log("emial sent succ");
     console.log(email, username, verificationCode, "thisiasdfjaldsfj");
+    console.log("should have had sent the email but . has it ");
     return ({
       success: true,
       message: "Successfully sent verification code"

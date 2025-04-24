@@ -4,15 +4,16 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
 import dbConnect from "@/lib/dbConnect";
 import UserModel from "@/model/User";
+import GoogleProvider from "next-auth/providers/google";
 
 export const authOptions: NextAuthOptions = {
     providers: [
         CredentialsProvider({
-            id: "credentials", // this is just id you have given to identify this auth option,as you can have more than one
+            id: "credentials", // this is just a id you have given to identify this auth option,as you can have more than one
             name: "credentials",//this is the name of credential options you have given (you can name it anything)
 
             credentials: {
-                email: { label: "Email", type: "email", placeholder: "jsmith" },
+                email: { label: "Email", type: "email", placeholder: "fuck" },
                 password: { label: "Password", type: "password" }
             },
 
@@ -51,14 +52,21 @@ export const authOptions: NextAuthOptions = {
                     throw new Error(err); // yahan pe thorw new Error(err) ye karna jaruri hai--> but why>???
                 }
             }
+        }),
+        GoogleProvider({
+            clientId: process.env.GOOGLE_CLIENT_ID || "",
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET || ""
         })
     ],
     callbacks: {
         async jwt({ token, user}) {
 
+            console.log("token form next-auth options: ", token);
+
             // below , we are updating token so that we can extract that information when we have token 
             // but before doing below thing you would have to add types (see /src/types/next-auth.d.ts);
             if(user){
+                
                 token._id = user._id?.toString()
                 token.isVerified = user.isVerified
                 token.isAcceptingMessages = user.isAcceptingMessages;
